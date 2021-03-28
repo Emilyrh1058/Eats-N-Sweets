@@ -8,8 +8,8 @@ var simplemaps_worldmap_mapdata={
     
     //State defaults
     state_description: "Click for a local supplier",
-    state_color: "#b5d781",
-    state_hover_color: "#8bae54",
+    state_color: "#008000",
+    state_hover_color: "#2cc22c",
     state_url: "https://simplemaps.com",
     border_size: 1.5,
     border_color: "#ffffff",
