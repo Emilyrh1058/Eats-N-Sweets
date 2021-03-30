@@ -12,9 +12,13 @@
   margin-right: auto;
 }
  
-.logo {
-
+.american {
+  position:absolute;
+  transition: .5s ease;
+  top: 250%;
+  left: 110%;
 }
+
  .materialize-red {
     background-color: #e51c23 !important;
   }
@@ -2362,11 +2366,11 @@
   
   /**
    * Remove the border on images inside links in IE 10-.
-   */
+   
   img {
     border-style: none;
   }
-  
+  */
   /**
    * Hide the overflow in IE.
    */
