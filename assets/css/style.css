@@ -13,7 +13,7 @@
 }
  
 .logo {
-  
+
 }
  .materialize-red {
     background-color: #e51c23 !important;
@@ -4488,7 +4488,7 @@
       min-height: 64px;
     }
     nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
-      height: 64px;
+      height: 150px;
       line-height: 64px;
     }
     .navbar-fixed {
