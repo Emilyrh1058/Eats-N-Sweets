@@ -1,15 +1,20 @@
-.map-image {
+/*.map-image {
     position: relative;
     width: 100%;
     height:auto;
     display: inline;
     margin-left: auto;
     margin-right: auto;
-  }
+  } */
    
   #american {
     position:absolute;
     transition: .5s ease;
     top: 250%;
     left: 110%;
+  }
+
+  .logo {
+    float: left;
+    padding-left: 10px;
   }
