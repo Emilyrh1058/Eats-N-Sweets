@@ -1,0 +1,21 @@
+{
+    "liveServer.settings.port": 5501
+};
+
+const storageInput = document.querySelector('.storage');
+const text = document.querySelector('.text');
+const storedInput = localStorage.getItem('textinput')
+
+if(storageInput) {
+    text.textContent = storedInput
+}
+
+storageInput.addEventListener('input', letter => {
+    console.log(letter)
+    text.textContent = letter.target.value
+})
+const saveLocalStorage = () => {
+    localStorage.setItem('textinput', text.textContent)
+}
+
+button.addEventListener('click', saveToLocalStorage)
