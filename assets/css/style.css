@@ -3,6 +3,22 @@
  * Copyright 2014-2017 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
+ 
+ .map-image {
+  width: 100%;
+  height:auto;
+  display: inline;
+  margin-left: auto;
+  margin-right: auto;
+}
+ 
+.american {
+  position:absolute;
+  transition: .5s ease;
+  top: 250%;
+  left: 110%;
+}
+
  .materialize-red {
     background-color: #e51c23 !important;
   }
@@ -1651,8 +1667,8 @@
     color: #ffab00 !important;
   }
   
-  .orange {
-    background-color: #ff9800 !important;
+  .olive {
+    background-color: #6B8E23 !important;
   }
   
   .orange-text {
@@ -2350,11 +2366,11 @@
   
   /**
    * Remove the border on images inside links in IE 10-.
-   */
+   
   img {
     border-style: none;
   }
-  
+  */
   /**
    * Hide the overflow in IE.
    */
@@ -2720,7 +2736,7 @@
     font-size: 6rem;
   }
   
-  img.responsive-img,
+  img.responsive-img, .map-image
   video.responsive-video {
     max-width: 100%;
     height: auto;
@@ -4476,7 +4492,7 @@
       min-height: 64px;
     }
     nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
-      height: 64px;
+      height: 150px;
       line-height: 64px;
     }
     .navbar-fixed {
@@ -4523,9 +4539,9 @@
   }
   
   h1 {
-    font-size: 4.2rem;
+    font-size: 2rem;
     line-height: 110%;
-    margin: 2.8rem 0 1.68rem 0;
+    margin: 0rem 0 1.68rem 0;
   }
   
   h2 {
