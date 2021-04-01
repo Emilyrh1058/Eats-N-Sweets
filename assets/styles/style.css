@@ -1,5 +1,49 @@
 #recipes-container {
+  font-family: big-caslon;
   background-color: rgba(178,236,93, 0.75);
   border: transparent 5px solid;
+  border-radius: 7px;
   padding: 3px;
+  margin-bottom: 20px;
+}
+
+#recipes-container h1 {
+  text-align: center;
+  color: black;
+  font-size: 45px;
+}
+
+#recipes-container h2 {
+  font-size: 25px;
+  margin: 5px;
+}
+
+#recipes-container ul {
+  background-color: white;
+  border: transparent 2px solid;
+  border-radius: 20px; 
+  text-align: center;
+  font-size: 20px;
+}
+
+#recipes-container li {
+  background-color: white;
+  border: transparent 2px solid;
+  border-radius: 20px; 
+  list-style-type: none;
+  font-size: 23px;
+  margin: 50px;
+  line-height: 1.5em;
+}
+
+#recipes-container span {
+  font-size: 20px;
+  background-color: white;
+  border: transparent 2px solid;
+  border-radius: 20px; 
+}
+
+#recipes-container img {
+  border: transparent 2px solid;
+  border-radius: 20px;
 }
