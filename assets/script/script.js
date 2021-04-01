@@ -16,6 +16,8 @@ const createImagePlacement = document.getElementById("image")
 const createIngridientsPlacement = document.getElementById("ingridients")
 const createYoutubeSectionPlacement = document.getElementById("youtube")
 
+
+
 var onClickCuisineMexico = function (event) {
     event.preventDefault();
     var mexicanButtonValue = buttonValue.value;
@@ -105,41 +107,6 @@ var onClickCuisineJamaica = function (event) {
     }
 }
 
-var getDessertCuisine = function (cuisine) {
-    fetch("https://api.edamam.com/search?q=Desserts&app_id=96a1ce69&app_key=bdba3210ad31eeb9ca5d5c1cc397acb7&from=1&to=5&cuisineType=" + cuisine)
-        .then((response) => {
-            if (response.ok) {
-                return response.json();
-            } else {
-                throw new Error("NETWORK RESPONSE NOT OK");
-            }
-        })
-        .then(function (data) {
-            console.log(data);
-            displayDessertRecipes(data);
-        });
-
-}
-
-function displayDessertRecipes(data) {
-    // Title 
-    const dessertName = data.hits[2].recipe.label
-    const createDessertTitle = document.createElement("h1")
-    createDessertTitle.innerHTML = dessertName
-    dessertTitlePlacement.appendChild(createDessertTitle)
-
-    //Ingridients + Instructions
-    const createIngridientsSectionDessert = document.createElement("span")
-    const getIngridientsDesserts = data.hits[2].recipe.ingredientLines
-    createIngridientsSectionDessert.innerHTML = "<h2> Ingridients: </h2>" + getIngridientsDesserts
-    createIngridientsPlacementDessert.appendChild(createIngridientsSectionDessert)
-
-    //Image
-    const createImageSectionDessert = document.createElement("span")
-    const getImageDessert = data.hits[2].recipe.image
-    createImageSectionDessert.innerHTML = "<img src=" + getImageDessert + ">"
-    createImagePlacementDessert.appendChild(createImageSectionDessert)
-}
 
 
 var getCuisinaCountry = function (cuisine) {
@@ -208,6 +175,43 @@ var getCuisinaCountry = function (cuisine) {
 
     }
 }
+
+var getDessertCuisine = function (cuisine) {
+    fetch("https://api.edamam.com/search?q=Desserts&app_id=96a1ce69&app_key=bdba3210ad31eeb9ca5d5c1cc397acb7&from=1&to=5&cuisineType=" + cuisine)
+        .then((response) => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                throw new Error("NETWORK RESPONSE NOT OK");
+            }
+        })
+        .then(function (data) {
+            console.log(data);
+            displayDessertRecipes(data);
+        });
+
+}
+
+function displayDessertRecipes(data) {
+    // Title 
+    const dessertName = data.hits[2].recipe.label
+    const createDessertTitle = document.createElement("h1")
+    createDessertTitle.innerHTML = dessertName
+    dessertTitlePlacement.appendChild(createDessertTitle)
+
+    //Ingridients + Instructions
+    const createIngridientsSectionDessert = document.createElement("span")
+    const getIngridientsDesserts = data.hits[2].recipe.ingredientLines
+    createIngridientsSectionDessert.innerHTML = "<h2> Ingridients: </h2>" + getIngridientsDesserts
+    createIngridientsPlacementDessert.appendChild(createIngridientsSectionDessert)
+
+    //Image
+    const createImageSectionDessert = document.createElement("span")
+    const getImageDessert = data.hits[2].recipe.image
+    createImageSectionDessert.innerHTML = "<img src=" + getImageDessert + ">"
+    createImagePlacementDessert.appendChild(createImageSectionDessert)
+}
+
 
 function clearContent() {
     createTitlePlacement.textContent = "";
