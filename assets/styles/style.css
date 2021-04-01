@@ -1,3 +1,7 @@
+root {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 #recipes-container {
   font-family: big-caslon;
   background-color: rgba(178,236,93, 0.75);
@@ -5,6 +9,7 @@
   border-radius: 7px;
   padding: 3px;
   margin-bottom: 20px;
+  margin-right:auto;
 }
 
 #recipes-container h1 {
@@ -46,4 +51,41 @@
 #recipes-container img {
   border: transparent 2px solid;
   border-radius: 20px;
+}
+
+h1 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h2 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+ul {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+li {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+button {
+  width: 10%;
+  height: 20px; 
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+span {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.region-btn{ 
+  width: 100%;
+  margin-left: 20px;
+  text-align: center;
+  margin: auto;
+}
+
+span img {
+  height: 300px; 
 }
