@@ -6845,38 +6845,6 @@
     pointer-events: none;
   }
   
-    /* checkbox aspect */
-  
-  
-  [type="checkbox"] + span:not(.lever) {
-    position: relative;
-    padding-left: 35px;
-    cursor: pointer;
-    display: inline-block;
-    height: 25px;
-    line-height: 25px;
-    font-size: 1rem;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-  }
-  
-  [type="checkbox"] + span:not(.lever):before,
-  [type="checkbox"]:not(.filled-in) + span:not(.lever):after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 18px;
-    height: 18px;
-    z-index: 0;
-    border: 2px solid #5a5a5a;
-    border-radius: 1px;
-    margin-top: 3px;
-    -webkit-transition: .2s;
-    transition: .2s;
-  }
   
   [type="checkbox"]:not(.filled-in) + span:not(.lever):after {
     border: 0;
