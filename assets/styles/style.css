@@ -90,16 +90,16 @@ span {
 }
 
 #image {
-  height: 250px; 
+
   width: 350px;
   float:right;
-  margin-right: 140px;
+  margin-right: 70px;
   margin-top: 150px;
 }
 #dessertimage {
-  height: 250px; 
+
   float:right;
-  margin-right: 140px;
+  margin-right: 70px;
   margin-top: auto;
 }
 
@@ -111,4 +111,6 @@ span img {
   border-style: solid;
 }
 
-
+#about-us {
+  margin-top: 70px;
+}
