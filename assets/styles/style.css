@@ -1,0 +1,5 @@
+#recipes-container {
+  background-color: rgba(178,236,93, 0.75);
+  border: transparent 5px solid;
+  padding: 3px;
+}

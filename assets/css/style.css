@@ -5,7 +5,7 @@
 */
 
 
-.materialize-red {
+ .materialize-red {
     background-color: #e51c23 !important;
   }
   
@@ -2149,14 +2149,14 @@
    * 2. Prevent adjustments of font size after orientation changes in
    *    IE on Windows Phone and in iOS.
    */
-  html {
+    html {
     line-height: 1.15;
     /* 1 */
     -ms-text-size-adjust: 100%;
     /* 2 */
     -webkit-text-size-adjust: 100%;
     /* 2 */
-  }
+  } 
   
   /* Sections
      ========================================================================== */
@@ -2569,7 +2569,7 @@
    */
   template {
     display: none;
-  }
+  } */
   
   /* Hidden
      ========================================================================== */
@@ -9047,5 +9047,4 @@
       text-align: center;
       margin-top: 1.2rem;
     }
-  }
-  
+  } 
