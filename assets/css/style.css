@@ -2,24 +2,10 @@
  * Materialize v1.0.0 (http://materializecss.com)
  * Copyright 2014-2017 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
- */
- 
- .map-image {
-  width: 100%;
-  height:auto;
-  display: inline;
-  margin-left: auto;
-  margin-right: auto;
-}
- 
-.american {
-  position:absolute;
-  transition: .5s ease;
-  top: 250%;
-  left: 110%;
-}
+*/
 
- .materialize-red {
+
+.materialize-red {
     background-color: #e51c23 !important;
   }
   
@@ -2804,7 +2790,6 @@
   .breadcrumb [class^="mdi-"], .breadcrumb [class*="mdi-"],
   .breadcrumb i.material-icons {
     display: inline-block;
-    float: left;
     font-size: 24px;
   }
   
@@ -5731,7 +5716,6 @@
   .waves-circle {
     -webkit-transform: translateZ(0);
             transform: translateZ(0);
-    -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
   }
   
   .waves-input-wrapper {
@@ -5752,7 +5736,6 @@
     height: 2.5em;
     line-height: 2.5em;
     border-radius: 50%;
-    -webkit-mask-image: none;
   }
   
   .waves-block {
@@ -6065,7 +6048,6 @@
     position: relative;
     -webkit-transition: opacity .4s;
     transition: opacity .4s;
-    -webkit-backface-visibility: hidden;
   }
   
   .materialboxed:hover:not(.active) {
@@ -6863,9 +6845,8 @@
     pointer-events: none;
   }
   
-  [type="checkbox"] {
     /* checkbox aspect */
-  }
+  
   
   [type="checkbox"] + span:not(.lever) {
     position: relative;
