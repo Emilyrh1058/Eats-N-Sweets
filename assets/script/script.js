@@ -8,7 +8,13 @@ var buttonValueJapan = document.querySelector("#japanBtn")
 var buttonValueGreece = document.querySelector("#greeceBtn")
 var buttonValueJamaica = document.querySelector("#jamaicaBtn")
 const createTitlePlacement = document.getElementById("title")
-
+const dessertTitlePlacement = document.getElementById("dessertTitle")
+const createIngridientsPlacementDessert = document.getElementById("dessertingridients")
+const createImagePlacementDessert = document.getElementById("dessertimage")
+const createInstructions = document.getElementById("instructions")
+const createImagePlacement = document.getElementById("image")
+const createIngridientsPlacement = document.getElementById("ingridients")
+const createYoutubeSectionPlacement = document.getElementById("youtube")
 
 var onClickCuisineMexico = function (event) {
     event.preventDefault();
@@ -16,7 +22,7 @@ var onClickCuisineMexico = function (event) {
     if (mexicanButtonValue) {
         getCuisinaCountry(mexicanButtonValue);
         getDessertCuisine(mexicanButtonValue);
-        
+        clearContent()
     }
 };
 
@@ -26,6 +32,7 @@ var onClickCuisineAmerica = function (event) {
     if (americanButtonValue) {
         getCuisinaCountry(americanButtonValue);
         getDessertCuisine(americanButtonValue);
+        clearContent()
     }
 }
 
@@ -35,6 +42,7 @@ var onClickCuisineFrance = function (event) {
     if (franceButtonValue) {
         getCuisinaCountry(franceButtonValue);
         getDessertCuisine(franceButtonValue);
+        clearContent()
     }
 }
 
@@ -44,6 +52,7 @@ var onClickCuisineItaly = function (event) {
     if (italyButtonValue) {
         getCuisinaCountry(italyButtonValue);
         getDessertCuisine(italyButtonValue);
+        clearContent()
     }
 }
 
@@ -53,6 +62,7 @@ var onClickCuisineIndian = function (event) {
     if (indianButtonValue) {
         getCuisinaCountry(indianButtonValue);
         getDessertCuisine(indianButtonValue);
+        clearContent()
     }
 }
 
@@ -62,6 +72,7 @@ var onClickCuisineChina = function (event) {
     if (chinaButtonValue) {
         getCuisinaCountry(chinaButtonValue);
         getDessertCuisine(chinaButtonValue);
+        clearContent()
     }
 }
 
@@ -71,6 +82,7 @@ var onClickCuisineJapan = function (event) {
     if (japanButtonValue) {
         getCuisinaCountry(japanButtonValue);
         getDessertCuisine(japanButtonValue);
+        clearContent()
     }
 }
 
@@ -80,6 +92,7 @@ var onClickCuisineGreece = function (event) {
     if (greekButtonValue) {
         getCuisinaCountry(greekButtonValue);
         getDessertCuisine(greekButtonValue);
+        clearContent()
     }
 }
 
@@ -88,7 +101,7 @@ var onClickCuisineJamaica = function (event) {
     var jamaicaButtonValue = buttonValueJamaica.value;
     if (jamaicaButtonValue) {
         getCuisinaCountry(jamaicaButtonValue);
-
+        clearContent()
     }
 }
 
@@ -112,24 +125,20 @@ function displayDessertRecipes(data) {
     // Title 
     const dessertName = data.hits[2].recipe.label
     const createDessertTitle = document.createElement("h1")
-    const dessertTitlePlacement = document.getElementById("dessertTitle")
     createDessertTitle.innerHTML = dessertName
     dessertTitlePlacement.appendChild(createDessertTitle)
 
     //Ingridients + Instructions
-    const createIngridientsPlacementDessert = document.getElementById("dessertingridients")
     const createIngridientsSectionDessert = document.createElement("span")
     const getIngridientsDesserts = data.hits[2].recipe.ingredientLines
     createIngridientsSectionDessert.innerHTML = "<h2> Ingridients: </h2>" + getIngridientsDesserts
     createIngridientsPlacementDessert.appendChild(createIngridientsSectionDessert)
 
     //Image
-    const createImagePlacementDessert = document.getElementById("dessertimage")
     const createImageSectionDessert = document.createElement("span")
     const getImageDessert = data.hits[2].recipe.image
     createImageSectionDessert.innerHTML = "<img src=" + getImageDessert + ">"
     createImagePlacementDessert.appendChild(createImageSectionDessert)
-
 }
 
 
@@ -167,25 +176,21 @@ var getCuisinaCountry = function (cuisine) {
                 console.log(data);
                 const instructionsRecipe = data.meals[0].strInstructions
                 createRecipeSection.innerHTML = instructionsRecipe
-                const createInstructions = document.getElementById("instructions")
                 createInstructions.appendChild(createRecipeSection)
 
                 //Title
-                const createTitlePlacement = document.getElementById("title")
                 const createTitleSection = document.createElement("h1")
                 const getTitle = data.meals[0].strMeal
                 createTitleSection.innerHTML = getTitle
                 createTitlePlacement.appendChild(createTitleSection)
 
                 //Image
-                const createImagePlacement = document.getElementById("image")
                 const createImageSection = document.createElement("span")
                 const getImage = data.meals[0].strMealThumb
                 createImageSection.innerHTML = "<img src=" + getImage + ">"
                 createImagePlacement.appendChild(createImageSection)
 
                 //Ingridients
-                const createIngridientsPlacement = document.getElementById("ingridients")
                 const createIngridientsSection = document.createElement("span")
                 const getIngridients = data.meals[0].strIngredient1
                 const getIngridients2 = data.meals[0].strIngredient2
@@ -202,6 +207,18 @@ var getCuisinaCountry = function (cuisine) {
             })
 
     }
+}
+
+function clearContent() {
+    createTitlePlacement.textContent = "";
+    dessertTitlePlacement.textContent = "";
+    createIngridientsPlacementDessert.textContent = "";
+    createImagePlacementDessert.textContent = "";
+    createInstructions.textContent = "";
+    createTitlePlacement.textContent = "";
+    createImagePlacement.textContent = "";
+    createIngridientsPlacement.textContent = "";
+    createYoutubeSectionPlacement.textContent = "";
 }
 
 buttonValue.addEventListener("click", onClickCuisineMexico)
