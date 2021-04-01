@@ -89,14 +89,6 @@ span {
   margin: auto;
 }
 
-span img {
-  height: 250px; 
-  width: 350px;
-  float:right;
-  border-width: 10px;
-  border-style: solid;
-}
-
 #image {
   height: 250px; 
   width: 350px;
@@ -110,4 +102,13 @@ span img {
   margin-right: 140px;
   margin-top: auto;
 }
+
+span img {
+  height: 250px; 
+  width: 350px;
+  float:right;
+  border-width: 10px;
+  border-style: solid;
+}
+
 
