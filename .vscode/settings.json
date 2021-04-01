@@ -2,6 +2,11 @@
     "liveServer.settings.port": 5501
 };
 
+var displayRepos = function(repos, searchTerm) {
+    console.log(repos);
+    console.log(searchTerm);
+  };
+
 const storageInput = document.querySelector('.storage');
 const text = document.querySelector('.text');
 const storedInput = localStorage.getItem('textinput')
