@@ -2,18 +2,57 @@
     "liveServer.settings.port": 5501
 };
 
+//Create a Function to Display Repos//
+var displayRepos = function(repos, searchTerm) {
+    console.log(repos);
+    console.log(searchTerm);
+  };
+
+  //Display Repository Data//
+  response.json().then(function(data) {
+    displayRepos(data, user);
+  });
+
+  // clear old content
+repoContainerEl.textContent = "";
+repoSearchTerm.textContent = searchTerm;
+
+//Display Repos Info
+// create a status element
+var statusEl = document.createElement("span");
+statusEl.classList = "flex-row align-center";
+
+// check if current repo has issues or not
+if (repos[i].open_issues_count > 0) {
+  statusEl.innerHTML =
+    "<i class='fas fa-times status-icon icon-danger'></i>" + repos[i].open_issues_count + " issue(s)";
+} else {
+  statusEl.innerHTML = "<i class='fas fa-check-square status-icon icon-success'></i>";
+}
+
+// append to container
+repoEl.appendChild(statusEl);
+
+  //Create a Storage Repo//
 const storageInput = document.querySelector('.storage');
 const text = document.querySelector('.text');
 const storedInput = localStorage.getItem('textinput')
+
+//Text Storage Repo//
 
 if(storageInput) {
     text.textContent = storedInput
 }
 
+//Storage and input lister//
+
 storageInput.addEventListener('input', letter => {
     console.log(letter)
     text.textContent = letter.target.value
 })
+
+//Local Storage//
+
 const saveLocalStorage = () => {
     localStorage.setItem('textinput', text.textContent)
 }
