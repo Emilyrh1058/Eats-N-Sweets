@@ -7,6 +7,11 @@ var displayRepos = function(repos, searchTerm) {
     console.log(searchTerm);
   };
 
+  //Display Repository Data//
+  response.json().then(function(data) {
+    displayRepos(data, user);
+  });
+
 const storageInput = document.querySelector('.storage');
 const text = document.querySelector('.text');
 const storedInput = localStorage.getItem('textinput')
