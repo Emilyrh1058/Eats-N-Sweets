@@ -1,10 +1,14 @@
-<<<<<<< HEAD
 /*!
  * Materialize v1.0.0 (http://materializecss.com)
  * Copyright 2014-2017 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
-.materialize-red {
+.logo {
+  float: left;
+  padding-left: 10px;
+}
+
+ .materialize-red {
   background-color: #e51c23 !important;
 }
 .materialize-red-text {
@@ -2002,7 +2006,6 @@ video.responsive-video {
 .breadcrumb [class*="mdi-"],
 .breadcrumb i.material-icons {
   display: inline-block;
-  float: left;
   font-size: 24px;
 }
 .breadcrumb:before {
@@ -4649,7 +4652,6 @@ body.keyboard-focused .dropdown-content li:focus {
 .waves-circle {
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
-  -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
 }
 .waves-input-wrapper {
   border-radius: 0.2em;
@@ -4667,7 +4669,6 @@ body.keyboard-focused .dropdown-content li:focus {
   height: 2.5em;
   line-height: 2.5em;
   border-radius: 50%;
-  -webkit-mask-image: none;
 }
 .waves-block {
   display: block;
@@ -4943,7 +4944,6 @@ body.keyboard-focused .dropdown-content li:focus {
   position: relative;
   -webkit-transition: opacity 0.4s;
   transition: opacity 0.4s;
-  -webkit-backface-visibility: hidden;
 }
 .materialboxed:hover:not(.active) {
   opacity: 0.8;
@@ -7606,7 +7606,7 @@ input[type="range"]::-ms-thumb {
     margin-top: 1.2rem;
   }
 }
-=======
+
 /*!
  * Materialize v1.0.0 (http://materializecss.com)
  * Copyright 2014-2017 Materialize
@@ -9610,7 +9610,6 @@ video.responsive-video {
 .breadcrumb [class*="mdi-"],
 .breadcrumb i.material-icons {
   display: inline-block;
-  float: left;
   font-size: 24px;
 }
 .breadcrumb:before {
@@ -11139,7 +11138,7 @@ nav .input-field label.active i {
   nav .nav-wrapper i,
   nav a.sidenav-trigger,
   nav a.sidenav-trigger i {
-    height: 64px;
+    height: 145px;
     line-height: 64px;
   }
   .navbar-fixed {
@@ -11189,7 +11188,7 @@ h6 a {
   font-weight: inherit;
 }
 h1 {
-  font-size: 4.2rem;
+  font-size: 2rem;
   line-height: 110%;
   margin: 2.8rem 0 1.68rem 0;
 }
@@ -12257,7 +12256,6 @@ body.keyboard-focused .dropdown-content li:focus {
 .waves-circle {
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
-  -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
 }
 .waves-input-wrapper {
   border-radius: 0.2em;
@@ -12275,7 +12273,6 @@ body.keyboard-focused .dropdown-content li:focus {
   height: 2.5em;
   line-height: 2.5em;
   border-radius: 50%;
-  -webkit-mask-image: none;
 }
 .waves-block {
   display: block;
@@ -12551,7 +12548,6 @@ body.keyboard-focused .dropdown-content li:focus {
   position: relative;
   -webkit-transition: opacity 0.4s;
   transition: opacity 0.4s;
-  -webkit-backface-visibility: hidden;
 }
 .materialboxed:hover:not(.active) {
   opacity: 0.8;
@@ -15214,4 +15210,4 @@ input[type="range"]::-ms-thumb {
     margin-top: 1.2rem;
   }
 }
->>>>>>> 13c54c04d2d34dbb4a50b9aacb213e2c1d15b869
+
