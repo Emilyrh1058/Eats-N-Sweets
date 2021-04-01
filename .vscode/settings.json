@@ -2,18 +2,37 @@
     "liveServer.settings.port": 5501
 };
 
+//Create a Function to Display Repos//
+var displayRepos = function(repos, searchTerm) {
+    console.log(repos);
+    console.log(searchTerm);
+  };
+
+  //Display Repository Data//
+  response.json().then(function(data) {
+    displayRepos(data, user);
+  });
+
+  //Create a Storage Repo//
 const storageInput = document.querySelector('.storage');
 const text = document.querySelector('.text');
 const storedInput = localStorage.getItem('textinput')
+
+//Text Storage Repo//
 
 if(storageInput) {
     text.textContent = storedInput
 }
 
+//Storage and input lister//
+
 storageInput.addEventListener('input', letter => {
     console.log(letter)
     text.textContent = letter.target.value
 })
+
+//Local Storage//
+
 const saveLocalStorage = () => {
     localStorage.setItem('textinput', text.textContent)
 }
