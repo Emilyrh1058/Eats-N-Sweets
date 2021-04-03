@@ -4,10 +4,7 @@
  * Copyright 2014-2017 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
-.logo {
-  float: left;
-  padding-left: 10px;
-}
+
 
 #hero-container img:nth-of-type(1) {
   animation-delay: 6s;
