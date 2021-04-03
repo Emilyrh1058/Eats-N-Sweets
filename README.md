@@ -36,5 +36,6 @@ THEN I am directed back to the home page
 6. Edamam API
 7. TheMealDP API
 
-## Snapshot of landing page
+## Demo
+
 
