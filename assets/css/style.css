@@ -4,6 +4,69 @@
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
 */
 
+body {
+  margin: 0;
+}
+
+.img-container {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+  opacity: 1;
+}
+
+.img-container img {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.img-container img.next {
+  opacity: 1;
+  z-index: 1;
+}
+
+.img-container img.prev {
+  opacity: 1;
+  z-index: 2;
+}
+
+.img-container img.fade-out {
+  opacity: 0;
+  transition: visibility 0s .5s, opacity .5s linear;
+  visibility: hidden;
+}
+
+#boldly {
+  position: absolute;
+  height: calc(95vh); 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: left; 
+  z-index: 2; 
+  top: 0; 
+  pointer-events: none; 
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  margin: 75px;
+}
+
+.transbox {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 1;
+}
 
  .materialize-red {
     background-color: #e51c23 !important;
@@ -2173,7 +2236,6 @@
   article,
   aside,
   footer,
-  header,
   nav,
   section {
     display: block;
@@ -2184,7 +2246,7 @@
    * `article` contexts in Chrome, Firefox, and Safari.
    */
   h1 {
-    font-size: 2em;
+    font-size: em;
     margin: 0.67em 0;
   }
   
