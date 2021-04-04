@@ -18,7 +18,7 @@ root {
 }
 
 #recipes-container h2 {
-  text-align: center;
+  text-align: left;
   font-size: 25px;
   margin: 5px;
 }
@@ -111,25 +111,29 @@ span img {
   color:red;
   float:right;
   position:relative;
-  top: 20px; 
-  right: 40px; 
+  top: 40px; 
+  right: 100px; 
   width: 90px;
   height: 80px;
   }
 
   #image {
-    right: 50px; 
-    top: 230px; 
     position: relative;
     float:right;
-    height: 250px; 
-    width: 350px;
+    top: 70px; 
   }
 
   #dessertimage {
     margin-top: auto;
-    right: 50px; 
     position: relative;
     float:right;
   }
 
+  .imagesize {
+    height: 250px; 
+    width: 350px;
+  }
+
+  #favorite {
+    background-color: rgba(178,236,93, 0.75);
+  }

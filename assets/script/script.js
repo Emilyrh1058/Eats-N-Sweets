@@ -18,28 +18,28 @@ const createImagePlacement = document.getElementById("image");
 const createIngridientsPlacement = document.getElementById("ingridients");
 const buttonSection = document.getElementById("likebutton");
 
+function hidePages() {
+  const ingridientSection = document.getElementById("recipes-container");
+  const landingPage = document.getElementById("img-container")
+  landingPage?.replaceWith(ingridientSection);
+}
+
 var onClickCuisineMexico = function (event) {
   event.preventDefault();
   var mexicanButtonValue = buttonValue.value;
   if (mexicanButtonValue) {
-    hidePages ();
+    hidePages();
     getCuisinaCountry(mexicanButtonValue);
     getDessertCuisine(mexicanButtonValue);
     clearContent();
   }
 };
 
-function hidePages () {
-  const ingridientSection = document.getElementById("recipes-container");
-  const landingPage = document.getElementById("img-container")
-  landingPage?.replaceWith(ingridientSection);
-}
-
 var onClickCuisineAmerica = function (event) {
   event.preventDefault();
   var americanButtonValue = buttonValueAmerican.value;
   if (americanButtonValue) {
-    hidePages ();
+    hidePages();
     getCuisinaCountry(americanButtonValue);
     getDessertCuisine(americanButtonValue);
     clearContent();
@@ -50,7 +50,7 @@ var onClickCuisineFrance = function (event) {
   event.preventDefault();
   var franceButtonValue = buttonValueFrance.value;
   if (franceButtonValue) {
-    hidePages ();
+    hidePages();
     getCuisinaCountry(franceButtonValue);
     getDessertCuisine(franceButtonValue);
     clearContent();
@@ -61,7 +61,7 @@ var onClickCuisineItaly = function (event) {
   event.preventDefault();
   var italyButtonValue = buttonValueItaly.value;
   if (italyButtonValue) {
-    hidePages ();
+    hidePages();
     getCuisinaCountry(italyButtonValue);
     getDessertCuisine(italyButtonValue);
     clearContent();
@@ -72,7 +72,7 @@ var onClickCuisineIndian = function (event) {
   event.preventDefault();
   var indianButtonValue = buttonValueIndian.value;
   if (indianButtonValue) {
-    hidePages ();
+    hidePages();
     getCuisinaCountry(indianButtonValue);
     getDessertCuisine(indianButtonValue);
     clearContent();
@@ -83,7 +83,7 @@ var onClickCuisineChina = function (event) {
   event.preventDefault();
   var chinaButtonValue = buttonValueChina.value;
   if (chinaButtonValue) {
-    hidePages ();
+    hidePages();
     getCuisinaCountry(chinaButtonValue);
     getDessertCuisine(chinaButtonValue);
     clearContent();
@@ -94,7 +94,7 @@ var onClickCuisineJapan = function (event) {
   event.preventDefault();
   var japanButtonValue = buttonValueJapan.value;
   if (japanButtonValue) {
-    hidePages ();
+    hidePages();
     getCuisinaCountry(japanButtonValue);
     getDessertCuisine(japanButtonValue);
     clearContent();
@@ -105,7 +105,7 @@ var onClickCuisineGreece = function (event) {
   event.preventDefault();
   var greekButtonValue = buttonValueGreece.value;
   if (greekButtonValue) {
-    hidePages ();
+    hidePages();
     getCuisinaCountry(greekButtonValue);
     getDessertCuisine(greekButtonValue);
     clearContent();
@@ -116,7 +116,7 @@ var onClickCuisineJamaica = function (event) {
   event.preventDefault();
   var jamaicaButtonValue = buttonValueJamaica.value;
   if (jamaicaButtonValue) {
-    hidePages ();
+    hidePages();
     getCuisinaCountry(jamaicaButtonValue);
     clearContent();
   }
@@ -125,7 +125,7 @@ var onClickCuisineJamaica = function (event) {
 var getDessertCuisine = function (cuisine) {
   fetch(
     "https://api.edamam.com/search?q=Desserts&app_id=96a1ce69&app_key=bdba3210ad31eeb9ca5d5c1cc397acb7&from=1&to=5&cuisineType=" +
-      cuisine
+    cuisine
   )
     .then((response) => {
       if (response.ok) {
@@ -138,7 +138,7 @@ var getDessertCuisine = function (cuisine) {
       console.log(data);
       displayDessertRecipes(data);
     });
-    
+
 };
 
 function displayDessertRecipes(data) {
@@ -149,7 +149,7 @@ function displayDessertRecipes(data) {
   dessertTitlePlacement.appendChild(createDessertTitle);
 
   //Ingridients + Instructions
-  const createIngridientsSectionDessert = document.createElement("span");
+  const createIngridientsSectionDessert = document.createElement("div");
   const getIngridientsDesserts = data.hits[2].recipe.ingredientLines;
   //createIngridientsPlacementDessert.innerHTML = "<h2> Ingridients: </h2>" + getIngridientsDesserts;
   createIngridientsSectionDessert.innerHTML = "<h2> Ingridients: </h2>" + getIngridientsDesserts;
@@ -160,14 +160,9 @@ function displayDessertRecipes(data) {
   const getImageDessert = data.hits[2].recipe.image;
   //createImageSectionDessert.innerHTML = "<img src=" + getImageDessert + ">";
   createImageSectionDessert.setAttribute('src', getImageDessert);
+  createImageSectionDessert.setAttribute('class', 'imagesize')
   createImagePlacementDessert.appendChild(createImageSectionDessert);
 
-  // Like Button
-  //const createButtonSection = document.createElement("button");
-  const buttonSection = document.getElementById("likebutton");
-  //createButtonSection.setAttribute("class", "fa fa-heart red-color")
-  buttonSection.setAttribute('class', 'fa fa-heart red-color');
-  //buttonSection.appendChild(createButtonSection)
 }
 
 var getCuisinaCountry = function (cuisine) {
@@ -216,6 +211,7 @@ var getCuisinaCountry = function (cuisine) {
         const createImageSection = document.createElement("img");
         const getImage = data.meals[0].strMealThumb;
         //createImageSection.innerHTML = "<img src=" + getImage + ">";
+        createImageSection.setAttribute('class', 'imagesize')
         createImageSection.setAttribute('src', getImage);
         createImagePlacement.appendChild(createImageSection);
 
@@ -233,37 +229,47 @@ var getCuisinaCountry = function (cuisine) {
         const getIngridients10 = data.meals[0].strIngredient10;
         createIngridientsSection.innerHTML =
           "<h2> Ingridients: </h2>" +
-          "<ul>" +
+          "<ol>" +
           getIngridients +
-          "</ul>" +
-          "<ul>" +
+          "</ol>" +
+          "<ol>" +
           getIngridients2 +
-          "</ul>" +
-          "<ul>" +
+          "</ol>" +
+          "<ol>" +
           getIngridients3 +
-          "</ul>" +
-          "<ul>" +
+          "</ol>" +
+          "<ol>" +
           getIngridients4 +
-          "</ul>" +
-          "<ul>" +
+          "</ol>" +
+          "<ol>" +
           getIngridients5 +
-          "</ul>" +
-          "<ul>" +
+          "</ol>" +
+          "<ol>" +
           getIngridients6 +
-          "</ul>" +
-          "<ul>" +
+          "</ol>" +
+          "<ol>" +
           getIngridients7 +
-          "</ul>" +
-          "<ul>" +
+          "</ol>" +
+          "<ol>" +
           getIngridients8 +
-          "</ul>" +
-          "<ul>" +
+          "</ol>" +
+          "<ol>" +
           getIngridients9 +
-          "</ul>" +
-          "<ul>" +
+          "</ol>" +
+          "<ol>" +
           getIngridients10 +
-          "</ul>";
+          "</ol>"
         //createIngridientsSection.appendChild(createIngridientsSection);
+
+        // Like Button
+        //const createButtonSection = document.createElement("button");
+        const buttonSection = document.getElementById("likebutton");
+        //createButtonSection.setAttribute("class", "fa fa-heart red-color")
+        buttonSection.setAttribute('class', 'fa fa-heart red-color');
+        const buttonIdNumber = data.meals[0].idMeal;
+        buttonSection.setAttribute("value", buttonIdNumber);
+        //buttonSection.appendChild(createButtonSection)
+
       });
   }
 };
@@ -363,21 +369,53 @@ class Slideshow {
 }
 new Slideshow()
 
+// function localStorage () {
+//    const buttonSection = document.getElementById("likebutton");
 
-function localStorage () {
-   const buttonSection = document.getElementById("likebutton");
+//    let myFavRecipe_serialized = JSON.stringify()
+//    localStorage.setItem("myFavoriteMeal", )
 
-   let myFavRecipe_serialized = JSON.stringify()
-   localStorage.setItem("myFavoriteMeal", )
+
+var favoriteMeal = function (idNumber) {
+  fetch("https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + idNumber)
+    .then((response) => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error("NETWORK RESPONSE NOT OK");
+      }
+    })
+    .then(function (data) {
+      console.log(data.meals[0].strMeal);
+      const favoriteList = document.getElementById("titlesfavorites")
+      const createTitleSectionFav = document.createElement("ol");
+      const getTitleFav = data.meals[0].strMeal;
+      createTitleSectionFav.innerHTML = "<h1> Favorite Recipes </h1>" + "<ol>" + getTitleFav + "</ol>"
+      favoriteList.appendChild(createTitleSectionFav);
+      favoriteList.style.display = "none"
+
+      const favoritePage = document.getElementById("favoriteclick")
+      favoritePage.addEventListener("click", function () {
+        favoriteList.style.display = "block"
+        const ingridientSection = document.getElementById("recipes-container");
+        const favoriteSection = document.getElementById("favorite")
+        ingridientSection?.replaceWith(favoriteSection);
+      })
+    })
+    .catch((error) => {
+      console.error("FETCH ERROR:", error);
+    });
 }
 
-// function favoriteMeal () {
-//   const sectionFavorite = document.getElementById("titlesoffavorites")
-//   const createTitleFavorite = document.createElement(div)
-//   createTitleFavorite.innerHTML = "<h1>Favorite Meals</h1>"
-//   sectionFavorite.appendChild(createTitleFavorite)
+var onClickMexicanFavorite = function (event) {
 
-//   const sectionFavoriteLists = document.getElementById("listfavorites")
-//   const createFavoriteLists = document.createElement(div)
+  var buttonFav = buttonSection.getAttribute("value")
+  if (buttonFav) {
+    favoriteMeal(buttonFav);
+  }
+  console.log(buttonFav)
+}
 
-// }
+
+
+buttonSection.addEventListener("click", onClickMexicanFavorite);
