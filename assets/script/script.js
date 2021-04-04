@@ -149,16 +149,15 @@ function displayDessertRecipes(data) {
   //Ingridients + Instructions
   const createIngridientsSectionDessert = document.createElement("span");
   const getIngridientsDesserts = data.hits[2].recipe.ingredientLines;
-  createIngridientsSectionDessert.innerHTML =
-    "<h2> Ingridients: </h2>" + getIngridientsDesserts;
-  createIngridientsPlacementDessert.appendChild(
-    createIngridientsSectionDessert
-  );
+  //createIngridientsPlacementDessert.innerHTML = "<h2> Ingridients: </h2>" + getIngridientsDesserts;
+  createIngridientsSectionDessert.innerHTML = "<h2> Ingridients: </h2>" + getIngridientsDesserts;
+  createIngridientsPlacementDessert.appendChild(createIngridientsSectionDessert);
 
   //Image
-  const createImageSectionDessert = document.createElement("span");
+  const createImageSectionDessert = document.createElement("img");
   const getImageDessert = data.hits[2].recipe.image;
-  createImageSectionDessert.innerHTML = "<img src=" + getImageDessert + ">";
+  //createImageSectionDessert.innerHTML = "<img src=" + getImageDessert + ">";
+  createImageSectionDessert.setAttribute('src', getImageDessert);
   createImagePlacementDessert.appendChild(createImageSectionDessert);
 
   // Like Button
@@ -212,13 +211,14 @@ var getCuisinaCountry = function (cuisine) {
         createTitlePlacement.appendChild(createTitleSection);
 
         //Image
-        const createImageSection = document.createElement("span");
+        const createImageSection = document.createElement("img");
         const getImage = data.meals[0].strMealThumb;
-        createImageSection.innerHTML = "<img src=" + getImage + ">";
+        //createImageSection.innerHTML = "<img src=" + getImage + ">";
+        createImageSection.setAttribute('src', getImage);
         createImagePlacement.appendChild(createImageSection);
 
         //Ingridients
-        const createIngridientsSection = document.createElement("span");
+        const createIngridientsSection = document.querySelector("#ingridients");
         const getIngridients = data.meals[0].strIngredient1;
         const getIngridients2 = data.meals[0].strIngredient2;
         const getIngridients3 = data.meals[0].strIngredient3;
@@ -261,7 +261,7 @@ var getCuisinaCountry = function (cuisine) {
           "<ul>" +
           getIngridients10 +
           "</ul>";
-        createIngridientsPlacement.appendChild(createIngridientsSection);
+        //createIngridientsSection.appendChild(createIngridientsSection);
       });
   }
 };

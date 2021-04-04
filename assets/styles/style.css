@@ -29,10 +29,19 @@ root {
   background-color: white;
   border: transparent 2px solid;
   border-radius: 20px; 
+  margin-right: 100px;
 }
 
 /* list of recpipe ingredients */
 #recipes-container ul {
+  background-color: white;
+  border: transparent 2px solid;
+  border-radius: 20px; 
+  text-align: center;
+  font-size: 20px;
+}
+
+.getIngridientsDessert {
   background-color: white;
   border: transparent 2px solid;
   border-radius: 20px; 
@@ -53,7 +62,8 @@ root {
 
 #recipes-container img {
   border: transparent 2px solid;
-  border-radius: 20px;
+  border-radius: 30px;
+  margin-left: 100px;
 }
 
 h1 {
