@@ -1,6 +1,7 @@
 {
     "liveServer.settings.port": 5501
-};
+}
+
 
 //Create a Function to Display Repos//
 var displayRepos = function(repos, searchTerm) {
