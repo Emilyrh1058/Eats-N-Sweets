@@ -406,10 +406,32 @@ function displayFavorite(data) {
 
   let myFavList_deserialized = JSON.parse(localStorage.getItem("favoritemeal"));
   console.log(myFavList_deserialized)
+}
+
+function loadPageFav() {
+
+  let listOFood = document.getElementById("titlesfavorites")
+  let foodFromLocal = JSON.parse(localStorage.getItem("favoritemeal"));
+
+  if (foodFromLocal) {
+    const foodOl = document.createElement("ol");
+    foodOl.innerHTML += foodFromLocal
+    console.log('food from foodOl storage', foodFromLocal)
+    listOFood.appendChild(foodOl);
   
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      const foodFromLocal = localStorage.getItem(key)
+  
+      foodOl.innerHTML += foodFromLocal;
+  }
+  }
+  
+
  
 }
- 
+loadPageFav()
+
 var onClickMexicanFavorite = function (event) {
 
   var buttonFav = buttonSection.getAttribute("value")
