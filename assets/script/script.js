@@ -150,9 +150,9 @@ function displayDessertRecipes(data) {
 
   //Ingridients + Instructions
   const createIngridientsSectionDessert = document.createElement("div");
-  const getIngridientsDesserts = data.hits[2].recipe.ingredientLines;
+  const getIngridientsDesserts = data.hits[2].recipe.url;
   //createIngridientsPlacementDessert.innerHTML = "<h2> Ingridients: </h2>" + getIngridientsDesserts;
-  createIngridientsSectionDessert.innerHTML = "<h2> Ingridients: </h2>" + getIngridientsDesserts;
+  createIngridientsSectionDessert.innerHTML = "<a href=" + getIngridientsDesserts + " target=_blank> Check out the recipe</a>";
   createIngridientsPlacementDessert.appendChild(createIngridientsSectionDessert);
 
   //Image
@@ -387,26 +387,29 @@ var favoriteMeal = function (idNumber) {
     })
     .then(function (data) {
       console.log(data.meals[0].strMeal);
-      const favoriteList = document.getElementById("titlesfavorites")
-      const createTitleSectionFav = document.createElement("ol");
-      const getTitleFav = data.meals[0].strMeal;
-      createTitleSectionFav.innerHTML = "<h1> Favorite Recipes </h1>" + "<ol>" + getTitleFav + "</ol>"
-      favoriteList.appendChild(createTitleSectionFav);
-      favoriteList.style.display = "none"
-
-      const favoritePage = document.getElementById("favoriteclick")
-      favoritePage.addEventListener("click", function () {
-        favoriteList.style.display = "block"
-        const ingridientSection = document.getElementById("recipes-container");
-        const favoriteSection = document.getElementById("favorite")
-        ingridientSection?.replaceWith(favoriteSection);
-      })
+      displayFavorite(data);
     })
     .catch((error) => {
       console.error("FETCH ERROR:", error);
     });
 }
 
+function displayFavorite(data) {
+  const favoriteList = document.getElementById("titlesfavorites")
+  const createTitleSectionFav = document.createElement("ol");
+  const getTitleFav = data.meals[0].strMeal;
+  createTitleSectionFav.innerHTML =  getTitleFav
+  favoriteList.appendChild(createTitleSectionFav);
+
+  let myFavList_serialized = JSON.stringify(getTitleFav)
+  window.localStorage.setItem('favoritemeal', myFavList_serialized);
+
+  let myFavList_deserialized = JSON.parse(localStorage.getItem("favoritemeal"));
+  console.log(myFavList_deserialized)
+  
+ 
+}
+ 
 var onClickMexicanFavorite = function (event) {
 
   var buttonFav = buttonSection.getAttribute("value")
@@ -416,6 +419,5 @@ var onClickMexicanFavorite = function (event) {
   console.log(buttonFav)
 }
 
-
-
 buttonSection.addEventListener("click", onClickMexicanFavorite);
+
