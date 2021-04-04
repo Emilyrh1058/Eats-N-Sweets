@@ -9,47 +9,54 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link href="./assets/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
-            <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <link href="./assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection">
     <link href="./assets/styles/style.css" type="text/css" rel="stylesheet" />
 </head>
+
 <body>
-    <nav class="light-green lighten-1" role="navigation">
-        <h1 class="header center">
-            <img src="assets/images/logo-175x150-200x150.png" alt="Global Cuisine logo" class="logo">
-        </h1>
+    <div class="container-fluid">
+        <nav class="light-green lighten-1" role="navigation">
+            <h1 class="header center">
+                <img src="assets/images/logo-175x150-200x150.png" alt="Global Cuisine logo" class="logo">
+            </h1>
 
-        <div class="nav-wrapper container">
-            <ul class="right hide-on-med-and-down">
-                <li><a onclick="window.location.reload()" href="#">HOME</a></li>
+            <div class="nav-wrapper container">
+                <ul class="right hide-on-med-and-down">
+                    <li><a onclick="window.location.reload()" href="#">HOME</a></li>
+                    <li><a href="#about-us">ABOUT US</a></li>
+                    <li><a href="#contact-us">CONTACT US</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
 
-
-                <li><a href="#about-us">ABOUT US</a></li>
-                <li><a href="#contact-us">CONTACT US</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="hero">
+    <div id="img-container"class="hero">
         <div class="text-block">
-            <h1>Boldly go where your taste buds haven't gone before with recipes from countries far and near. Your kitchen is the flight deck.</h1>
+            <h1>Boldly go where your taste buds haven't gone before with recipes from countries far and near. Your
+                kitchen is the flight deck.</h1>
             <div class="container recipe buttons">
                 <!-- <div class="region-btn"> -->
                 <!-- <div class="recipe buttons "></div> -->
-                    <button value="Mexican" id="mexicoBtn"  class="btn-large waves-effect waves-light olive">Mexican</button>
-                    <button value="American" id="americanBtn"  class="btn-large waves-effect waves-light olive">American</button>
-                    <button value="French" id="franceBtn"  class="btn-large waves-effect waves-light olive">French</button>
-                    <button value="Italian" id="italynBtn"  class="btn-large waves-effect waves-light olive">Italian</button>
-                    <button value="Indian" id="indiaBtn"  class="btn-large waves-effect waves-light olive">Indian</button>
-                    <button value="Chinese" id="chinaBtn"  class="btn-large waves-effect waves-light olive">Chinese</button>
-                    <button value="Japanese" id="japanBtn"  class="btn-large waves-effect waves-light olive">Japanese</button>
-                    <button value="Greek" id="greeceBtn"  class="btn-large waves-effect waves-light olive">Greek</button>
-                    <button value="Jamaican" id="jamaicaBtn"  class="btn-large waves-effect waves-light olive">Jamaican</button>
-                </div>
-            </div>   
+                <button value="Mexican" id="mexicoBtn" class="btn-large waves-effect waves-light olive">Mexican</button>
+                <button value="American" id="americanBtn"
+                    class="btn-large waves-effect waves-light olive">American</button>
+                <button value="French" id="franceBtn" class="btn-large waves-effect waves-light olive">French</button>
+                <button value="Italian" id="italynBtn" class="btn-large waves-effect waves-light olive">Italian</button>
+                <button value="Indian" id="indiaBtn" class="btn-large waves-effect waves-light olive">Indian</button>
+                <button value="Chinese" id="chinaBtn" class="btn-large waves-effect waves-light olive">Chinese</button>
+                <button value="Japanese" id="japanBtn"
+                    class="btn-large waves-effect waves-light olive">Japanese</button>
+                <button value="Greek" id="greeceBtn" class="btn-large waves-effect waves-light olive">Greek</button>
+                <button value="Jamaican" id="jamaicaBtn"
+                    class="btn-large waves-effect waves-light olive">Jamaican</button>
+            </div>
         </div>
-        <div class="img-container" data-slideshow>
+
+        <div id="img-container" class="img-container" data-slideshow>
             <ul class="slides">
                 <li><img class="img1" src="./assets/images/stock-photo-1.jpeg"></li>
                 <li><img class="img2" src="./assets/images/stock-photo-2.jpeg"></li>
@@ -58,70 +65,70 @@
                 <li><img class="img5" src="./assets/images/stock-photo-5.jpeg"></li>
             </ul>
 
-
         </div>
     </div>
 
-    <!--Country Recipe-->
-    <div id="recipes-container" class="container hoverable">
-        <div id="title" class="l"></div>
-        <div id="image" class="l"></div>
-        <div id="ingridients" class="l"></div>
-        <div id="instructions" class="l"></div>
-        <div id="dessertimage" class="l"></div>
-        <div id="buttonDessert" class="l"></div>
-        <div id="youtube" class="l"></div>
-        <!--Country Dessert Recipe-->
-        </br>
 
-
-    <!--Country Recipe-->
-    <div id="recipes-container" class="container hoverable">
-    <div id="title" class="l"></div>
-    <div id="ingridients" class="l"></div>
-    <div id="instructions" class="l"></div>
-    <div id="image" class="l"></div>
-    <div id="buttonDessert" class="l"></div>
-    <div id="youtube" class="l"></div>
-
-    <!--Country Dessert Recipe-->
-    </br>
-</br>
-    <div id="dessertTitle" class="l"></div>
-    <div id="dessertingridients" class="l"></div>
-    <div id="dessertimage" class="l"></div>
-    </div>
-        <footer class="page-footer light-green">
-            <div class="container">
+        <!--Country Recipe-->
+        <div id="recipes-container" class="container-fluid hoverable">
+            <!-- change back to div if fails -->
+            <div id="dinner-container" class="container">
+                <button id="likebutton" class="btn-large waves-effect waves-light"></button>
+                <div id="title" class="l"></div>
                 <div class="row">
-                    <div class="col l6 s12">
-                        <h5 id="about-us" class="white-text">About Us</h5>
-                        <p class="grey-text text-lighten-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur laboriosam et commodi, nam corporis alias accusantium cumque aperiam nobis pariatur laudantium tempora numquam exercitationem ea eum necessitatibus sint corrupti fuga.</p>
-                    </div>
-                    <br>
-                    <div class="col l6 s12">
-                        <h5 id="contact-us" class="white-text">Contact us</h5>
-                        <ul>
-                            <li><a class="white-text" href="#!">E-MAIL: globalcuisine@email.com</a></li>
-                            <br>
-                            <li><a class="white-text" href="#!">CALL US: (123) 456-7890</a></li>
-                        </ul>
-                    </div>
+                    <div id="ingridients" class="l col s6"></div>
+                    <div id="image" class="l col s6"></div>
+                    <div id="instructions" class="l col s12"></div>
+                </div>
+                <div id="buttonDessert" class="l"></div>
+            </div>
+
+            <!--Country Dessert Recipe-->
+                </br>
+                </br>
+            <div id="desert-container" class="container">
+                <div id="dessertTitle" class=" col s12"></div>
+                <div class="row">
+                    <div id="dessertingridients" class="l col s6"></div>
+                    <div id="dessertimage" class="l col s6"></div>
                 </div>
             </div>
-            <div class="footer-copyright">
-                <div class="container">
-                    Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+        </div>
+    <footer class="page-footer light-green">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 id="about-us" class="white-text">About Us</h5>
+                    <p class="grey-text text-lighten-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Consequuntur laboriosam et commodi, nam corporis alias accusantium cumque aperiam nobis pariatur
+                        laudantium tempora numquam exercitationem ea eum necessitatibus sint corrupti fuga.</p>
+                </div>
+                <br>
+                <div class="col l6 s12">
+                    <h5 id="contact-us" class="white-text">Contact us</h5>
+                    <ul>
+                        <li><a class="white-text" href="#!">E-MAIL: globalcuisine@email.com</a></li>
+                        <br>
+                        <li><a class="white-text" href="#!">CALL US: (123) 456-7890</a></li>
+                    </ul>
                 </div>
             </div>
-        </footer>
-        <!--  Scripts-->
-        <script src="assets/script/script.js"></script>
-        <!-- <script src="../../bin/materialize.js"></script> -->
-        <!-- <script src="js/init.js"></script> -->
-        <div class="sidenav-overlay"></div><div class="drag-target"></div></body></html>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+            </div>
+        </div>
+    </footer>
+    <!--  Scripts-->
+    <script src="assets/script/script.js"></script>
+    <!-- <script src="../../bin/materialize.js"></script> -->
+    <!-- <script src="js/init.js"></script> -->
+    <div class="sidenav-overlay"></div>
+    <div class="drag-target"></div>
 </body>
 
 </html>
+</body>
 
-        
+</html>
