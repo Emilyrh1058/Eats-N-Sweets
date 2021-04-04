@@ -138,6 +138,7 @@ var getDessertCuisine = function (cuisine) {
       console.log(data);
       displayDessertRecipes(data);
     });
+    
 };
 
 function displayDessertRecipes(data) {
@@ -150,22 +151,23 @@ function displayDessertRecipes(data) {
   //Ingridients + Instructions
   const createIngridientsSectionDessert = document.createElement("span");
   const getIngridientsDesserts = data.hits[2].recipe.ingredientLines;
-  createIngridientsSectionDessert.innerHTML =
-    "<h2> Ingridients: </h2>" + getIngridientsDesserts;
-  createIngridientsPlacementDessert.appendChild(
-    createIngridientsSectionDessert
-  );
+  //createIngridientsPlacementDessert.innerHTML = "<h2> Ingridients: </h2>" + getIngridientsDesserts;
+  createIngridientsSectionDessert.innerHTML = "<h2> Ingridients: </h2>" + getIngridientsDesserts;
+  createIngridientsPlacementDessert.appendChild(createIngridientsSectionDessert);
 
   //Image
-  const createImageSectionDessert = document.createElement("span");
+  const createImageSectionDessert = document.createElement("img");
   const getImageDessert = data.hits[2].recipe.image;
-  createImageSectionDessert.innerHTML = "<img src=" + getImageDessert + ">";
+  //createImageSectionDessert.innerHTML = "<img src=" + getImageDessert + ">";
+  createImageSectionDessert.setAttribute('src', getImageDessert);
   createImagePlacementDessert.appendChild(createImageSectionDessert);
 
   // Like Button
-  const createButtonSection = document.createElement("button");
-  createButtonSection.setAttribute("class", "fa fa-heart red-color")
-  buttonSection.appendChild(createButtonSection)
+  //const createButtonSection = document.createElement("button");
+  const buttonSection = document.getElementById("likebutton");
+  //createButtonSection.setAttribute("class", "fa fa-heart red-color")
+  buttonSection.setAttribute('class', 'fa fa-heart red-color');
+  //buttonSection.appendChild(createButtonSection)
 }
 
 var getCuisinaCountry = function (cuisine) {
@@ -211,13 +213,14 @@ var getCuisinaCountry = function (cuisine) {
         createTitlePlacement.appendChild(createTitleSection);
 
         //Image
-        const createImageSection = document.createElement("span");
+        const createImageSection = document.createElement("img");
         const getImage = data.meals[0].strMealThumb;
-        createImageSection.innerHTML = "<img src=" + getImage + ">";
+        //createImageSection.innerHTML = "<img src=" + getImage + ">";
+        createImageSection.setAttribute('src', getImage);
         createImagePlacement.appendChild(createImageSection);
 
         //Ingridients
-        const createIngridientsSection = document.createElement("span");
+        const createIngridientsSection = document.querySelector("#ingridients");
         const getIngridients = data.meals[0].strIngredient1;
         const getIngridients2 = data.meals[0].strIngredient2;
         const getIngridients3 = data.meals[0].strIngredient3;
@@ -260,7 +263,7 @@ var getCuisinaCountry = function (cuisine) {
           "<ul>" +
           getIngridients10 +
           "</ul>";
-        createIngridientsPlacement.appendChild(createIngridientsSection);
+        //createIngridientsSection.appendChild(createIngridientsSection);
       });
   }
 };
@@ -360,33 +363,13 @@ class Slideshow {
 }
 new Slideshow()
 
-// //Local Storage
-// var data = [{"test": {}}]; // Some json data
-// localStorage.setItem(<KEY NAME>, JSON.stringify(data));
 
-// // To retrieve it
-// var saved = localStorage.getItem(<KEY NAME>)
-// console.log(JSON.parse(saved));
+function localStorage () {
+   const buttonSection = document.getElementById("likebutton");
 
-// function localStorage () {
-//    const nameOutVal = document.getElementById('nameinput')
-//    const buttonOp = document.getElementById("button")
-//    const listOutput = document.getElementById("output")
-//    const buttonSection = document.getElementById("likebutton");
-
-//    buttonSection.onclick = function () {
-//     if (nameOnly && score) {
-//         localStorage.setItem(score, nameOnly);
-//     }
-// };
-
-// for (let i = 0; i < localStorage.length; i++) {
-//     const key = localStorage.key(i);
-//     const nameOnly = localStorage.getItem(key)
-
-//     listOutput.innerHTML += `${nameOnly}: ${score}<br />`;
-// };
-// }
+   let myFavRecipe_serialized = JSON.stringify()
+   localStorage.setItem("myFavoriteMeal", )
+}
 
 // function favoriteMeal () {
 //   const sectionFavorite = document.getElementById("titlesoffavorites")
