@@ -4,7 +4,6 @@ root {
 
 #recipes-container {
   font-family: big-caslon;
-  background-color: rgba(178,236,93, 0.75);
   border: transparent 5px solid;
   border-radius: 7px;
   padding: 3px;
@@ -13,7 +12,7 @@ root {
 }
 
 #recipes-container h1 {
-  text-align: center;
+  text-align: left;
   color: black;
   font-size: 45px;
 }
@@ -24,11 +23,9 @@ root {
 }
 
 #recipes-container ul {
-  background-color: white;
-  border: transparent 2px solid;
   border-radius: 20px; 
-  text-align: center;
   font-size: 20px;
+  width: 30%; 
 }
 
 #recipes-container li {
@@ -86,18 +83,39 @@ span {
   margin: auto;
 }
 
-span img {
-  height: 300px; 
-}
-
-#likebutton {
-  width: 25%; 
-  float: right;
-  background-color: transparent;
-  margin-left: 300px;
-  margin-top: 30px; 
-}
 
 .red-color {
   color:red;
+  float:right;
+  position:relative;
+  top: 20px; 
+  right: 40px; 
+  width: 90px;
+  height: 80px;
+  }
+
+  #image {
+    right: 50px; 
+    top: 230px; 
+    position: relative;
+    float:right;
+
+  }
+
+  #dessertimage {
+    margin-top: auto;
+    right: 50px; 
+    position: relative;
+    float:right;
+  }
+  
+  span img {
+    height: 250px; 
+    width: 350px;
+    left: 40px; 
+  }
+
+  #img-container {
+    padding-top: 0px;
+    margin: 0px; 
   }

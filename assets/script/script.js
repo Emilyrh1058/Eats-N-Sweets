@@ -16,6 +16,7 @@ const createImagePlacementDessert = document.getElementById("dessertimage");
 const createInstructions = document.getElementById("instructions");
 const createImagePlacement = document.getElementById("image");
 const createIngridientsPlacement = document.getElementById("ingridients");
+const buttonSection = document.getElementById("likebutton");
 
 var onClickCuisineMexico = function (event) {
   event.preventDefault();
@@ -163,7 +164,6 @@ function displayDessertRecipes(data) {
 
   // Like Button
   const createButtonSection = document.createElement("button");
-  const buttonSection = document.getElementById("likebutton");
   createButtonSection.setAttribute("class", "fa fa-heart red-color")
   buttonSection.appendChild(createButtonSection)
 }
@@ -360,4 +360,41 @@ class Slideshow {
 }
 new Slideshow()
 
-//Local Storage
+// //Local Storage
+// var data = [{"test": {}}]; // Some json data
+// localStorage.setItem(<KEY NAME>, JSON.stringify(data));
+
+// // To retrieve it
+// var saved = localStorage.getItem(<KEY NAME>)
+// console.log(JSON.parse(saved));
+
+// function localStorage () {
+//    const nameOutVal = document.getElementById('nameinput')
+//    const buttonOp = document.getElementById("button")
+//    const listOutput = document.getElementById("output")
+//    const buttonSection = document.getElementById("likebutton");
+
+//    buttonSection.onclick = function () {
+//     if (nameOnly && score) {
+//         localStorage.setItem(score, nameOnly);
+//     }
+// };
+
+// for (let i = 0; i < localStorage.length; i++) {
+//     const key = localStorage.key(i);
+//     const nameOnly = localStorage.getItem(key)
+
+//     listOutput.innerHTML += `${nameOnly}: ${score}<br />`;
+// };
+// }
+
+// function favoriteMeal () {
+//   const sectionFavorite = document.getElementById("titlesoffavorites")
+//   const createTitleFavorite = document.createElement(div)
+//   createTitleFavorite.innerHTML = "<h1>Favorite Meals</h1>"
+//   sectionFavorite.appendChild(createTitleFavorite)
+
+//   const sectionFavoriteLists = document.getElementById("listfavorites")
+//   const createFavoriteLists = document.createElement(div)
+
+// }
