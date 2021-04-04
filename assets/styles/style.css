@@ -89,3 +89,15 @@ span {
 span img {
   height: 300px; 
 }
+
+#likebutton {
+  width: 25%; 
+  float: right;
+  background-color: transparent;
+  margin-left: 300px;
+  margin-top: 30px; 
+}
+
+.red-color {
+  color:red;
+  }

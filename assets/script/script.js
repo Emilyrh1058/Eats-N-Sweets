@@ -16,22 +16,29 @@ const createImagePlacementDessert = document.getElementById("dessertimage");
 const createInstructions = document.getElementById("instructions");
 const createImagePlacement = document.getElementById("image");
 const createIngridientsPlacement = document.getElementById("ingridients");
-const createYoutubeSectionPlacement = document.getElementById("youtube");
 
 var onClickCuisineMexico = function (event) {
   event.preventDefault();
   var mexicanButtonValue = buttonValue.value;
   if (mexicanButtonValue) {
+    hidePages ();
     getCuisinaCountry(mexicanButtonValue);
     getDessertCuisine(mexicanButtonValue);
     clearContent();
   }
 };
 
+function hidePages () {
+  const ingridientSection = document.getElementById("recipes-container");
+  const landingPage = document.getElementById("img-container")
+  landingPage?.replaceWith(ingridientSection);
+}
+
 var onClickCuisineAmerica = function (event) {
   event.preventDefault();
   var americanButtonValue = buttonValueAmerican.value;
   if (americanButtonValue) {
+    hidePages ();
     getCuisinaCountry(americanButtonValue);
     getDessertCuisine(americanButtonValue);
     clearContent();
@@ -42,6 +49,7 @@ var onClickCuisineFrance = function (event) {
   event.preventDefault();
   var franceButtonValue = buttonValueFrance.value;
   if (franceButtonValue) {
+    hidePages ();
     getCuisinaCountry(franceButtonValue);
     getDessertCuisine(franceButtonValue);
     clearContent();
@@ -52,6 +60,7 @@ var onClickCuisineItaly = function (event) {
   event.preventDefault();
   var italyButtonValue = buttonValueItaly.value;
   if (italyButtonValue) {
+    hidePages ();
     getCuisinaCountry(italyButtonValue);
     getDessertCuisine(italyButtonValue);
     clearContent();
@@ -62,6 +71,7 @@ var onClickCuisineIndian = function (event) {
   event.preventDefault();
   var indianButtonValue = buttonValueIndian.value;
   if (indianButtonValue) {
+    hidePages ();
     getCuisinaCountry(indianButtonValue);
     getDessertCuisine(indianButtonValue);
     clearContent();
@@ -72,6 +82,7 @@ var onClickCuisineChina = function (event) {
   event.preventDefault();
   var chinaButtonValue = buttonValueChina.value;
   if (chinaButtonValue) {
+    hidePages ();
     getCuisinaCountry(chinaButtonValue);
     getDessertCuisine(chinaButtonValue);
     clearContent();
@@ -82,6 +93,7 @@ var onClickCuisineJapan = function (event) {
   event.preventDefault();
   var japanButtonValue = buttonValueJapan.value;
   if (japanButtonValue) {
+    hidePages ();
     getCuisinaCountry(japanButtonValue);
     getDessertCuisine(japanButtonValue);
     clearContent();
@@ -92,6 +104,7 @@ var onClickCuisineGreece = function (event) {
   event.preventDefault();
   var greekButtonValue = buttonValueGreece.value;
   if (greekButtonValue) {
+    hidePages ();
     getCuisinaCountry(greekButtonValue);
     getDessertCuisine(greekButtonValue);
     clearContent();
@@ -102,6 +115,7 @@ var onClickCuisineJamaica = function (event) {
   event.preventDefault();
   var jamaicaButtonValue = buttonValueJamaica.value;
   if (jamaicaButtonValue) {
+    hidePages ();
     getCuisinaCountry(jamaicaButtonValue);
     clearContent();
   }
@@ -146,6 +160,12 @@ function displayDessertRecipes(data) {
   const getImageDessert = data.hits[2].recipe.image;
   createImageSectionDessert.innerHTML = "<img src=" + getImageDessert + ">";
   createImagePlacementDessert.appendChild(createImageSectionDessert);
+
+  // Like Button
+  const createButtonSection = document.createElement("button");
+  const buttonSection = document.getElementById("likebutton");
+  createButtonSection.setAttribute("class", "fa fa-heart red-color")
+  buttonSection.appendChild(createButtonSection)
 }
 
 var getCuisinaCountry = function (cuisine) {
@@ -254,7 +274,6 @@ function clearContent() {
   createTitlePlacement.textContent = "";
   createImagePlacement.textContent = "";
   createIngridientsPlacement.textContent = "";
-  createYoutubeSectionPlacement.textContent = "";
 }
 
 buttonValue.addEventListener("click", onClickCuisineMexico);
@@ -341,3 +360,4 @@ class Slideshow {
 }
 new Slideshow()
 
+//Local Storage
