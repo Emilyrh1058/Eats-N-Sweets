@@ -162,10 +162,11 @@ function displayDessertRecipes(data) {
   createImagePlacementDessert.appendChild(createImageSectionDessert);
 
   // Like Button
-  const createButtonSection = document.createElement("button");
+  //const createButtonSection = document.createElement("button");
   const buttonSection = document.getElementById("likebutton");
-  createButtonSection.setAttribute("class", "fa fa-heart red-color")
-  buttonSection.appendChild(createButtonSection)
+  //createButtonSection.setAttribute("class", "fa fa-heart red-color")
+  buttonSection.setAttribute('class', 'fa fa-heart red-color');
+  //buttonSection.appendChild(createButtonSection)
 }
 
 var getCuisinaCountry = function (cuisine) {

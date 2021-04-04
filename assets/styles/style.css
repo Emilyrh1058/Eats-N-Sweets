@@ -3,7 +3,6 @@ root {
 }
 
 #recipes-container {
-  font-family: big-caslon;
   background-color: rgba(178,236,93, 0.75);
   border: transparent 5px solid;
   border-radius: 7px;
@@ -19,10 +18,20 @@ root {
 }
 
 #recipes-container h2 {
+  text-align: center;
   font-size: 25px;
   margin: 5px;
 }
 
+/* holds the ul's */
+#recipes-container span {
+  font-size: 20px;
+  background-color: white;
+  border: transparent 2px solid;
+  border-radius: 20px; 
+}
+
+/* list of recpipe ingredients */
 #recipes-container ul {
   background-color: white;
   border: transparent 2px solid;
@@ -31,22 +40,15 @@ root {
   font-size: 20px;
 }
 
+/* description box */
 #recipes-container li {
   background-color: white;
   border: transparent 2px solid;
   border-radius: 20px; 
   list-style-type: none;
   font-size: 23px;
-  margin: 50px;
+  margin: 0;
   line-height: 1.5em;
-}
-
-#recipes-container span {
-  font-size: 20px;
-  /* float: left; */
-  background-color: white;
-  border: transparent 2px solid;
-  border-radius: 20px; 
 }
 
 #recipes-container img {
@@ -80,6 +82,10 @@ span {
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
+span img {
+  height: 300px; 
+}
+
 .region-btn{ 
   width: 100%;
   margin-left: 20px;
@@ -87,18 +93,12 @@ span {
   margin: auto;
 }
 
-span img {
-  height: 300px; 
-}
-
-#likebutton {
-  width: 25%; 
+#likebutton { 
   float: right;
   background-color: transparent;
-  margin-left: 300px;
-  margin-top: 30px; 
 }
 
+/* colors */
 .red-color {
   color:red;
   }
