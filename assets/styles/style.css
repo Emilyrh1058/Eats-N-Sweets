@@ -102,6 +102,7 @@ span img {
 #likebutton { 
   float: right;
   background-color: transparent;
+  display: inline-;
 }
 
 /* colors */
