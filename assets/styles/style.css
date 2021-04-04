@@ -3,7 +3,7 @@ root {
 }
 
 #recipes-container {
-  background-color: rgba(178,236,93, 0.75);
+  background-color: #9ccc65;
   border: transparent 5px solid;
   border-radius: 7px;
   padding: 3px;
@@ -26,7 +26,6 @@ root {
 /* holds the ul's */
 #recipes-container span {
   font-size: 20px;
-  background-color: white;
   border: transparent 2px solid;
   border-radius: 20px; 
   margin-right: 100px;
@@ -40,7 +39,6 @@ root {
 }
 
 .getIngridientsDessert {
-  background-color: white;
   border: transparent 2px solid;
   border-radius: 20px; 
   text-align: center;
@@ -49,13 +47,13 @@ root {
 
 /* description box */
 #recipes-container li {
-  background-color: white;
   border: transparent 2px solid;
   border-radius: 20px; 
   list-style-type: none;
   font-size: 23px;
   margin: 0;
   line-height: 1.5em;
+  margin-top: 30px; 
 }
 
 #recipes-container img {
@@ -111,8 +109,7 @@ span img {
   color:red;
   float:right;
   position:relative;
-  top: 40px; 
-  right: 100px; 
+  top: 0px; 
   width: 90px;
   height: 80px;
   }
@@ -120,7 +117,7 @@ span img {
   #image {
     position: relative;
     float:right;
-    top: 70px; 
+    top: 20px; 
   }
 
   #dessertimage {

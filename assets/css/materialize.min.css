@@ -13,12 +13,25 @@ body {
   padding-left: 10px;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
 .hero {
   position: absolute;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .hero img {
-  width: 100%;
+  width: 100%
+  ;
 }
 
 .text-block { /* positioning */
