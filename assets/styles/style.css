@@ -148,3 +148,19 @@ span img {
 .container-fluid {
     z-index: 1;
   }
+
+  @media only screen and (max-width: 1030px) {
+    .text-block {
+      width: auto;
+      height: auto; 
+    }
+
+    h1 {
+      size:  15px; 
+    }
+
+    button {
+      width: auto;
+      height: auto; 
+    }
+  }
