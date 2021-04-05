@@ -38,6 +38,8 @@ function myFunction() {
 
 
 
+
+
 var onClickCuisineMexico = function (event) {
   event.preventDefault();
   var mexicanButtonValue = buttonValue.value;
