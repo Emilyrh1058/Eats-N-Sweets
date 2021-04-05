@@ -38,6 +38,7 @@ THEN I am directed back to the home page
 6. Edamam API
 7. TheMealDP API
 
-## Demo
+## Deployed:
+https://emilyrh1058.github.io/Group-Project-1---Global-Cuisine/
 
 
