@@ -103,6 +103,7 @@ span img {
   float: right;
   background-color: transparent;
   display: inline-;
+  margin-top: 10px;
 }
 
 /* colors */
@@ -110,7 +111,7 @@ span img {
   color:red;
   float:right;
   position:relative;
-  top: 0px; 
+  top: 15px; 
   width: 90px;
   height: 80px;
   }

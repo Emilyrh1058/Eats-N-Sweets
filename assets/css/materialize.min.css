@@ -23,6 +23,16 @@ body {
   padding-top: 102px;
 }
 
+
+header {
+  z-index: 1;
+}
+
+.banner {
+  position: relative;
+  z-index: 0;
+}
+
 .hero {
   position: absolute;
   display: flex;
