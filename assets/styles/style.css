@@ -112,12 +112,14 @@ span img {
   top: 0px; 
   width: 90px;
   height: 80px;
+  z-index: 0;
   }
 
   #image {
     position: relative;
     float:right;
     top: 20px; 
+    z-index: 0;
   }
 
   #dessertimage {
@@ -129,8 +131,16 @@ span img {
   .imagesize {
     height: 250px; 
     width: 350px;
+    z-index: 0;
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
   }
 
   #favorite {
     background-color: rgba(178,236,93, 0.75);
+  }
+
+.container-fluid {
+    z-index: 1;
   }
